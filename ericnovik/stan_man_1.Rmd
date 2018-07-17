@@ -1,7 +1,7 @@
 ---
-title: 'Deconstructing the Stan Manual Part 1: Linear Regression'
+title: 'Introduction to Stan Workshop'
 author: "Eric Novik"
-date: "15 Feb 2018"
+date: "17 July 2018"
 autosize: true
 header-includes:
   - \usepackage{amsmath}
