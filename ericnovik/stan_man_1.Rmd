@@ -68,10 +68,11 @@ $$
 log_p <- function(theta, data) {
   lp <- 0
   for (i in 1:data$N) 
-    lp <- lp + log(theta) * data$y[i] + log(1 - theta) * (1 - data$y[i])
+    lp <- lp + log(theta) * data[i] + log(1 - theta) * (1 - data[i])
   return(lp)
 }
-data <- c(0, 1, 0, 1, 1); theta <- seq(0.001, 0.999, length.out = 250)
+data <- c(0, 1, 0, 1, 1); 
+theta <- seq(0.001, 0.999, length.out = 250)
 log_lik <- log_p(theta = theta, data)
 log_prior <- log(dbeta(theta, 1, 1))
 log_posterior <- log_lik + log_prior
