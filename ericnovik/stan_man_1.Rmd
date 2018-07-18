@@ -67,7 +67,7 @@ $$
 ```{r, eval=FALSE}
 log_p <- function(theta, data) {
   lp <- 0
-  for (i in 1:data$N) 
+  for (i in 1:length(data)) 
     lp <- lp + log(theta) * data[i] + log(1 - theta) * (1 - data[i])
   return(lp)
 }
